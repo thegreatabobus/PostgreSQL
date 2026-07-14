@@ -13,3 +13,14 @@ create table basics.students (
         created_at timestamp default now()
 
 );
+
+
+
+insert into basics.students (name, email, age)
+values
+    ('Sangam', 'sangam@gmail.com', 55),
+    ('Jogn', 'john@gmail.com', 23);
+
+
+
+select * from basics.students;
