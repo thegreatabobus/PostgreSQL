@@ -1,6 +1,7 @@
 drop table if exists basics.products_basics;
+drop table if exists basics.products_basics;
 
-create table basics.products_basics (
+create table basics.products_basic (
 
     id serial primary key,
 
@@ -15,16 +16,22 @@ create table basics.products_basics (
     price numeric(10,2),
 
     is_active boolean default true
-)
+);
 
-    insert into basics.products_basic
-        (name, description, stock, total_views, price, is_active)
-    values
-        ('product 1',
-        'product desc',
-        100,
-        1200,
-        2455.65,
-        true)
+insert into basics.products_basic
+    (name, description, stock, total_views, price, is_active)
+values
+    ('product 1',
+    'product desc',
+    100,
+    1200,
+    2455.65,
+    true);
 
 select * from basics.products_basic;
+
+select id, name, price, is_active
+from basics.products_basic
+where is_active;
+
+
